@@ -1,0 +1,32 @@
+{
+    "name": "anzioalphabasic",
+    "displayName": "AnzioAlphaBasic",
+    "description": "Anzio Alpha Basic support for Visual Studio Code",
+    "version": "1.0.0",
+    "publisher": "Kujawadl",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "alphabasic",
+            "aliases": ["Alpha Basic", "alphabasic"],
+            "extensions": [".bas", ".map"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "alphabasic",
+            "scopeName": "source.alphabasic",
+            "path": "./syntaxes/alphabasic.tmLanguage.json"
+        }]
+    },
+    "devDependencies": {
+        "vsce": "1.31.1"
+    },
+    "scripts": {
+        "compile": "vsce package"
+    }
+}

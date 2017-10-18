@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Alpha Basic",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.alphabasic",
+					"match": "!.*[^&]\\n"
+				},
+				{
+					"name": "comment.block.alphabasic",
+					"begin": "!.*&",
+					"end": "(?<!&)\\n"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.alphabasic",
+					"match": "(?i)\\b(program|map1|map2|map3|map4|map5|return|if|else|endif|then|goto|call|print|using|xcall|or|and|include|on|switch|case|while|do|loop|for|next|chain|end|input|data|read|write|lookup|open|line|output|kill|cmdlin|time|date|close|dim)\\b"
+				},
+				{
+					"name": "support.class.alphabasic",
+					"match": "(?i)\\b(chr|edit\\$|fill|instr|lcs|ucs|ditos|dstoi|errmsg|fileblock|getkey|val|edit|tab|int|ucs|lcs|space|len|mid|right|left|strip\\$|str|err|byte|word|long|io|mem)\\b"
+				},
+				{
+					"name": "markup.bold.alphabasic",
+					"match": "(?i)\\b(sleep|mesag|msglog|amos|submit|inmemo|common|basort|flock|xlock|spool|xmount|gtlang|trmchr|idtim|odtim|rename|strip|lkinfo|lokser|fnusr|tcp|url|getvti|db2)\\b"
+				},
+				{
+					"name": "invalid.illegal.alphabasic",
+					"match": "(?i)\\b(scale|significance|strsize|echo|noecho)\\b"
+				},
+				{
+					"name": "entity.name.function.alphabasic",
+					"match": "(?i)^\\s*[a-z][a-z'_\\d]*(?=:)"
+				},
+				{
+					"name": "variable.name.alphabasic",
+					"match": "(?i)(?<!CALL\\s)[a-z][a-z'_\\d]*[\\$#]?(?==)"
+				},
+				{
+					"name": "support.variable.alphabasic",
+					"match": "(?i)(?<!CALL\\s)[a-z][a-z'_\\d]*[\\$#]?(?=([\\s\\[\\)\\*\\+\\-\\/<>,;]|\\(\\d+\\)))"
+				},
+				{
+					"name": "support.function.alphabasic",
+					"match": "(?i)([a-z][a-z'_\\d]*(?=\\()|(?<=(CALL|GOTO)\\s)[a-z][a-z'_\\d]+)"
+				},
+				{
+					"name": "constant.numeric.alphabasic",
+					"match": "(?i)\\b\\d+([.E]\\d+)?\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.alphabasic",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.alphabasic",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.alphabasic"
+}
