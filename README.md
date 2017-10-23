@@ -16,6 +16,20 @@ Basic syntax highlighting which recognizes:
 
 The syntax highlighter can recognize such multiline comments to help avoid these kinds of mistakes.
 
+### 1.0.2
+
+* Treat optional line numbers at the beginning of lines as comments.
+* Disable keyword highlighting when part of a label.
+* Add support for the following file extensions:
+    * .lsx
+    * .map
+    * .io
+    * .qry
+
+### 1.0.1
+
+* Don't treat `\"` as an escape character.
+
 ### 1.0.0
 
-Initial release
+* Initial release.

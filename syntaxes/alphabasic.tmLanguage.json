@@ -23,6 +23,10 @@
 					"name": "comment.block.alphabasic",
 					"begin": "!.*&",
 					"end": "(?<!&)\\n"
+				},
+				{
+					"name": "comment.line.number-sign.alphabasic",
+					"match": "(?i)^[\\da-f]+\\s"
 				}
 			]
 		},
@@ -30,15 +34,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.alphabasic",
-					"match": "(?i)\\b(program|map1|map2|map3|map4|map5|return|if|else|endif|then|goto|call|print|using|xcall|or|and|include|on|switch|case|while|do|loop|for|next|chain|end|input|data|read|write|lookup|open|line|output|kill|cmdlin|time|date|close|dim)\\b"
+					"match": "(?i)\\b(program|map1|map2|map3|map4|map5|return|if|else|endif|then|goto|call|print|using|xcall|or|and|include|on|switch|case|while|do|loop|for|next|chain|end|input|data|read|write|lookup|open|line|output|kill|cmdlin|time|date|close|dim)\\b(?!')"
 				},
 				{
 					"name": "support.class.alphabasic",
-					"match": "(?i)\\b(chr|edit\\$|fill|instr|lcs|ucs|ditos|dstoi|errmsg|fileblock|getkey|val|edit|tab|int|ucs|lcs|space|len|mid|right|left|strip\\$|str|err|byte|word|long|io|mem)\\b"
+					"match": "(?i)\\b(chr|edit\\$|fill|instr|lcs|ucs|ditos|dstoi|errmsg|fileblock|getkey|val|edit|tab|int|ucs|lcs|space|len|mid|right|left|strip\\$|str|err|byte|word|long|io|mem)\\b(?!')"
 				},
 				{
 					"name": "markup.bold.alphabasic",
-					"match": "(?i)\\b(sleep|mesag|msglog|amos|submit|inmemo|common|basort|flock|xlock|spool|xmount|gtlang|trmchr|idtim|odtim|rename|strip|lkinfo|lokser|fnusr|tcp|url|getvti|db2)\\b"
+					"match": "(?i)\\b(sleep|mesag|msglog|amos|submit|inmemo|common|basort|flock|xlock|spool|xmount|gtlang|trmchr|idtim|odtim|rename|strip|lkinfo|lokser|fnusr|tcp|url|getvti|db2)\\b(?!')"
 				},
 				{
 					"name": "invalid.illegal.alphabasic",
@@ -46,7 +50,7 @@
 				},
 				{
 					"name": "entity.name.function.alphabasic",
-					"match": "(?i)^\\s*[a-z][a-z'_\\d]*(?=:)"
+					"match": "(?i)\\s*[a-z][a-z'_\\d]*(?=:)"
 				},
 				{
 					"name": "variable.name.alphabasic",
@@ -58,7 +62,7 @@
 				},
 				{
 					"name": "support.function.alphabasic",
-					"match": "(?i)([a-z][a-z'_\\d]*(?=\\()|(?<=(CALL|GOTO)\\s)[a-z][a-z'_\\d]+)"
+					"match": "(?i)([a-z][a-z'_\\d]*(?=\\()|(?<=(CALL|GOTO)\\s)([a-z][a-z'_\\d]+,)*[a-z][a-z'_\\d]+)"
 				},
 				{
 					"name": "constant.numeric.alphabasic",
@@ -73,7 +77,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.alphabasic",
-					"match": "\\\\."
+					"match": "\\\\[^\"]"
 				}
 			]
 		}
