@@ -2,7 +2,7 @@
     "name": "anzioalphabasic",
     "displayName": "AnzioAlphaBasic",
     "description": "Anzio Alpha Basic support for Visual Studio Code",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "Kujawadl",
     "engines": {
         "vscode": "^1.17.0"
@@ -14,7 +14,7 @@
         "languages": [{
             "id": "alphabasic",
             "aliases": ["Alpha Basic", "alphabasic"],
-            "extensions": [".bas", ".map", ".lsx", ".map", ".io", ".qry"],
+            "extensions": [".bas", ".map", ".inc", ".lsx", ".map", ".io", ".qry"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{

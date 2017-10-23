@@ -16,6 +16,10 @@ Basic syntax highlighting which recognizes:
 
 The syntax highlighter can recognize such multiline comments to help avoid these kinds of mistakes.
 
+### 1.0.3
+
+* Add support for the file extension .inc
+
 ### 1.0.2
 
 * Treat optional line numbers at the beginning of lines as comments.
