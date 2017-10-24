@@ -34,7 +34,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.alphabasic",
-					"match": "(?i)\\b(program|map1|map2|map3|map4|map5|return|if|else|endif|then|goto|call|print|using|xcall|or|and|include|on|switch|case|while|do|loop|for|next|chain|end|input|data|read|write|lookup|open|line|output|kill|cmdlin|time|date|close|dim)\\b(?!')"
+					"match": "(?i)\\b(program|map1|map2|map3|map4|map5|return|if|else|endif|then|goto|call|print|using|xcall|or|and|include|on|switch|case|default|endswitch|exit|while|do|loop|for|next|chain|end|input|data|read|write|lookup|open|line|output|kill|cmdlin|time|date|close|dim)\\b(?!')"
 				},
 				{
 					"name": "support.class.alphabasic",

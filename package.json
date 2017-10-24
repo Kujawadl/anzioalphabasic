@@ -2,7 +2,7 @@
     "name": "anzioalphabasic",
     "displayName": "AnzioAlphaBasic",
     "description": "Anzio Alpha Basic support for Visual Studio Code",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "Kujawadl",
     "engines": {
         "vscode": "^1.17.0"
